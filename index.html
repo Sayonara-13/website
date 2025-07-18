@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -11,14 +11,12 @@
 </head>
 <body>
     <header class="site-header">
-        <!-- Верхняя часть шапки -->
         <div class="top-header">
-            <div class="logo">
-                <img src="images/logo-bg-circle.png" class="logo-bg" alt="" />
-                <img src="images/logo-text.png" class="logo-text" alt="Логотип" />
-            </div>
             <div class="header-info">
-
+                <div class="logo">
+                    <img src="images/logo-bg-circle.png" class="logo-bg" alt="Кружочек" />
+                    <img src="images/logo-text.png" class="logo-text" alt="Логотип" />
+                </div>
                 <div class="search">
                     <img src="images/search-icon.png" alt="Лупа" class="search-icon" />
                     <input type="text" />
@@ -53,7 +51,6 @@
             </div>
         </div>
 
-        <!-- Нижняя часть шапки -->
         <div class="bottom-header">
             <nav class="main-nav">
                 <ul class="nav-left">
@@ -92,12 +89,8 @@
             <img src="images/banner-1.png" alt="Распродажа">
             <div class="sale-banner">
                 <div class="sale-top">
-                    <div class="sale-title">РАСПРОДАЖА</div>
+                    <div class="sale-title">РАСПРО<br>ДАЖА</div>
                     <div class="sale-subtitle">ПЕРЕЙТИ К ТОВАРАМ</div>
-                </div>
-                <div class="sale-bottom">
-                    <div class="sale-discount">скидки до</div>
-                    <div class="sale-percent"><span>60%</span></div>
                 </div>
             </div>
         </div>
@@ -158,7 +151,7 @@
     </section>
 
     <h2 class="section-title"><span> ХИТЫ ПРОДАЖ </span></h2>
-    <div class="product-section">
+    <section class="product-section">
         <button class="slider-btn prev">
             <img src="images/arrow-left.png">
         </button>
@@ -223,10 +216,10 @@
         <button class="slider-btn next">
             <img src="images/arrow-right.png" alt="next">
         </button>
-    </div>
+    </section>
 
     <h2 class="section-title"><span> НОВИНКИ </span></h2>
-    <div class="product-section">
+    <section class="product-section">
         <button class="slider-btn prev">
             <img src="images/arrow-left.png">
         </button>
@@ -292,10 +285,10 @@
         <button class="slider-btn next">
             <img src="images/arrow-right.png" alt="next">
         </button>
-    </div>
+    </section>
 
     <h2 class="section-title"><span> СТИЛИ </span></h2>
-    <div class="product-section">
+    <section class="product-section">
         <button class="slider-btn prev">
             <img src="images/arrow-left.png" alt="prev">
         </button>
@@ -327,10 +320,10 @@
         <button class="slider-btn next">
             <img src="images/arrow-right.png" alt="next">
         </button>
-    </div>
+    </section>
 
     <h2 class="section-title"><span> БРЕНДЫ </span></h2>
-    <div class="product-section">
+    <section class="product-section">
         <button class="slider-btn prev">
             <img src="images/arrow-left.png" alt="prev">
         </button>
@@ -359,12 +352,9 @@
         <button class="slider-btn next">
             <img src="images/arrow-right.png" alt="next">
         </button>
-    </div>
+    </section>
 
     <section class="about">
-        <div class="about-image">
-            <img src="images/Layer 92.png" alt="Лампа">
-        </div>
         <div class="about-text">
             <h2>ОБ ИНТЕРНЕТ-МАГАЗИНЕ</h2>
             <p><strong>В нашем магазине</strong> представлено свыше 100 000 светильников из России, Китая и таких европейских стран, как Австрия, Бельгия, Великобритания, Германия, Испания, Италия, Чехия. У нас можно купить освещение для спальни, гостиной, кухни, коридора, ванной и детской комнат.</p>
@@ -437,13 +427,15 @@
     </footer>
 
     <div class="footer-bottom">
-        © 2022 «Свет, Тула. Интернет-магазин люстр. Все права защищены. При копировании материала, ссылка на сайт - обязательна.
-        Вся информация на сайте относительно размеров, параметров, комплектаций, технических характеристик, комплектующих и стоимости светильников прочих товаров, носит информационный характер и не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации звоните по телефонам: 8-800-551-39-31
+        <div class="footer-bottom-text">
+            © 2022 «Свет, Тула. Интернет-магазин люстр. Все права защищены. При копировании материала, ссылка на сайт - обязательна.
+            Вся информация на сайте относительно размеров, параметров, комплектаций, технических характеристик, комплектующих и стоимости светильников прочих товаров, носит информационный характер и не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации звоните по телефонам: 8-800-551-39-31
+        </div>
     </div>
 
     <script>
         document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
-            const container = wrapper.closest('.product-section'); // вся секция слайдера
+            const container = wrapper.closest('.product-section');
             const track = wrapper.querySelector('.slider-track');
             const prevBtn = container.querySelector('.slider-btn.prev');
             const nextBtn = container.querySelector('.slider-btn.next');
